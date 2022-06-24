@@ -8,6 +8,8 @@ const withSocket = (Component) => (props) => {
 
   useEffect(() => {
     setsocket(io(process.env.BACKEND_URL || "http://localhost:3100"));
+    console.log(process.env.BACKEND_URL);
+    console.log(process.env.PORT);
   }, []);
 
   useEffect(() => {
