@@ -36,15 +36,20 @@ const Comment = ({ username, date, img, description, myComment }) => {
         <Grid item flex="1 0 0">
           {!myComment && (
             <Typography
-              fontSize={"15px"}
+              fontSize={"16px"}
               component="span"
               marginBottom={"1rem"}
+              fontWeight="bold"
             >
               {username}
             </Typography>
           )}
           <Box>
-            <Typography fontSize={"13px"} component="p">
+            <Typography
+              fontSize={"13px"}
+              component="p"
+              color={"rgb(232 232 232)"}
+            >
               {description}
             </Typography>
           </Box>

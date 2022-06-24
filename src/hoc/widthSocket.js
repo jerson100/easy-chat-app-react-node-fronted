@@ -7,9 +7,7 @@ const withSocket = (Component) => (props) => {
   const { user } = useAuthContext();
 
   useEffect(() => {
-    // setsocket(io("http://localhost:3100"));
-    setsocket(io("https://easy-chat-app-react.herokuapp.com/"));
-    // console.log(socket.current);
+    setsocket(io(process.env.BACKEND_URL || "http://localhost:3100"));
   }, []);
 
   useEffect(() => {

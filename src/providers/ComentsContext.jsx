@@ -18,7 +18,6 @@ const ComentsProvider = React.memo(({ children, io }) => {
   useEffect(() => {
     if (io) {
       io.on("newComment", (data) => {
-        // console.log(JSON.parse(data));
         const newC = JSON.parse(data);
         dispatch({
           type: USER_TYPES["ADD [COMMENT]"],
@@ -26,6 +25,10 @@ const ComentsProvider = React.memo(({ children, io }) => {
         });
       });
     }
+    //para la desconexion del usuario...
+    // return () =>{
+    //     io.emit("exit", JSON.stringify())
+    // }
   }, [io]);
 
   const addComment = useCallback(
