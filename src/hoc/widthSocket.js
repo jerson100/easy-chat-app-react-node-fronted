@@ -7,9 +7,9 @@ const withSocket = (Component) => (props) => {
   const { user } = useAuthContext();
 
   useEffect(() => {
-    setsocket(io(process.env.BACKEND_URL || "http://localhost:3100"));
-    console.log(process.env.BACKEND_URL);
-    console.log(process.env.PORT);
+    setsocket(io(process.env.REACT_APP_BACKEND_URL || "http://localhost:3100"));
+    console.log(process.env.REACT_APP_BACKEND_URL);
+    console.log(process.env.REACT_APP_PORT);
   }, []);
 
   useEffect(() => {
